@@ -1,4 +1,4 @@
-/*
+"""
 QUESTION:-
 Given an array A[] of size n. The task is to find the largest element in it.
 
@@ -11,14 +11,13 @@ Output:
 90
 Explanation:
 The largest element of given array is 90
-*/
 
-/*
+
 APPROACH:-
 -> Intialize the ans with starting element
 -> Traverse the entire array and update the ans if the element is greater then ans
 -> Finally, return the ans
-*/
+"""
 
 // CODE:-
 arr = [1,4,6,7]
