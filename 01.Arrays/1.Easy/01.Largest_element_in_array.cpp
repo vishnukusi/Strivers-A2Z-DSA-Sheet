@@ -21,16 +21,10 @@ APPROACH:-
 */
 
 // CODE:-
-int largest(int arr[], int n)
-{
-    int ans = arr[0];
-    for (int i = 1; i < n; i++)
-    {
-        if (arr[i] > ans)
-            ans = arr[i];
-    }
-    return ans;
-}
+arr = [1,4,6,7]
+def maximumfunc(arr):
+  return max(arr)
+print(maximumfunc(arr))
 
 // TIME COMPLEXITY = O(N)
 // SPACE COMPLEXITY = O(0)
