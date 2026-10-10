@@ -1,4 +1,4 @@
-/*
+"""
 QUESTION:-
 
 Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
@@ -18,30 +18,31 @@ Input: nums = [0,0,1,1,1,2,2,3,3,4]
 Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
 Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 It does not matter what you leave beyond the returned k (hence they are underscores).
-*/
 
-/*
+
+
 APPROACH:-
 -> The idea, is to use keep a pointer k which signifies that upto here the array is sorted
 -> Now travese the entire array and if arr[k]!=arr[j] that is arr[j] is a unique value hence it should be included
    so increment the k and swap arr[k] with arr[j]
 -> Return k+1, +1 is because of 0 based indexing
-*/
+"""
 
 // CODE:-
-int removeDuplicates(vector<int> &nums)
-{
-    int k = 0; // upto k array contains unique elements
-    for (int j = 1; j < nums.size(); j++)
-    {
-        if (nums[k] != nums[j])
-        {
-            k++;
-            swap(nums[k], nums[j]);
-        }
-    }
-    return k + 1;
-}
+nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+
+nums1 = sorted(list(set(nums)))
+
+s = []
+tempn = nums
+for x in nums1:
+  if x in tempn:
+    tempn.remove(x)
+s = tempn
+
+nums1 = nums1 + s
+
+print(nums1)
 
 // TIME COMPLEXITY = O(N)
 // SPACE COMPLEXITY = O(0)
