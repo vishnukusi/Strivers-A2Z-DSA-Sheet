@@ -33,6 +33,7 @@ nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 
 nums1 = sorted(list(set(nums)))
 
+   
 s = []
 tempn = nums
 for x in nums1:
