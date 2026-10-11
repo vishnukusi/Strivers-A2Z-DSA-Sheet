@@ -18,10 +18,14 @@ APPROACH:-
 """
 
 // CODE:-
+
 a = [18,4,5,7,4]
+
 s = a[0]
+
 for i in range(len(a)-1):
   a[i] = a[i+1]
+
 a[-1] = s
 print(a)
 
